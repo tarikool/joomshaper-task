@@ -76,7 +76,7 @@ class AuthController extends BaseController
                 return $this->loginUser($user['id']);
             }
         }
-        
+
         $this->errors[] = "Credentials doesn't match";
         $this->jsonResponse($this->errors, 403);
     }

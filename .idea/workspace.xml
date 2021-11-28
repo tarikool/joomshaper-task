@@ -20,10 +20,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/config/database.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/public/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectId" id="21SBUINO3gC2hRz7QuSrXROdkUz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,6 +38,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -49,6 +46,7 @@
       <recent name="$PROJECT_DIR$/views/admin" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -66,28 +64,6 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="351" y="23" width="664" height="717" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1638018462426">
-      <screen x="0" y="23" width="1366" height="723" />
-    </state>
-    <state x="351" y="23" width="664" height="717" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1366.723@0.23.1366.723" timestamp="1638018462426" />
-    <state x="466" y="145" width="434" height="478" key="FileChooserDialogImpl" timestamp="1637926420987">
-      <screen x="0" y="23" width="1366" height="723" />
-    </state>
-    <state x="466" y="145" width="434" height="478" key="FileChooserDialogImpl/0.23.1366.723@0.23.1366.723" timestamp="1637926420987" />
-    <state x="480" y="313" width="405" height="142" key="NewPhpFileDialog" timestamp="1638021532914">
-      <screen x="0" y="23" width="1366" height="723" />
-    </state>
-    <state x="480" y="313" width="405" height="142" key="NewPhpFileDialog/0.23.1366.723@0.23.1366.723" timestamp="1638021532914" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1638015128465">
-      <screen x="0" y="23" width="1366" height="723" />
-    </state>
-    <state width="498" height="445" key="SwitcherDM/0.23.1366.723@0.23.1366.723" timestamp="1638015128465" />
-    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1638014880886">
-      <screen x="0" y="23" width="1366" height="723" />
-    </state>
-    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup/0.23.1366.723@0.23.1366.723" timestamp="1638014880886" />
+    <option name="version" value="3" />
   </component>
 </project>
