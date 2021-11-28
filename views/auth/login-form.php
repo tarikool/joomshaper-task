@@ -78,13 +78,13 @@
                     window.location.href = 'dashboard';
                 },
                 error: function(xhr, status, error) {
-                    // let errors = JSON.parse(xhr.responseText);
-                    //
-                    // $.each( errors, function( key, message ) {
-                    //     $('.error-message')
-                    //         .append("<p class='text-danger'>"+ message+ "</p>");
-                    //
-                    // });
+                    let errors = JSON.parse(xhr.responseText);
+
+                    $.each( errors, function( key, message ) {
+                        $('.error-message')
+                            .append("<p class='text-danger'>"+ message+ "</p>");
+
+                    });
 
                     console.log(error);
 

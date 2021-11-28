@@ -17,6 +17,8 @@ $router->get('login', AuthController::class, 'loginForm');
 $router->post('login', AuthController::class, 'login');
 $router->get('registration', AuthController::class, 'registrationForm');
 $router->post('registration', AuthController::class, 'registration');
+$router->get('logout', AuthController::class, 'logoutUser');
+
 
 $router->get('dashboard', DashboardController::class, 'index');
 

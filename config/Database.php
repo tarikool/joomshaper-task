@@ -13,7 +13,7 @@ class Database
     public $host       =  "127.0.0.1";
     public $db         =  "joomshaper_db";
     public $user       =  "root";
-    public $password   =  "" ;
+    public $password   =  "123@321cst" ;
     public $charset    = 'utf8mb4';
 
     public $dsn;
@@ -60,19 +60,19 @@ class Database
 
     public function query($query, $param, $mul = false)
     {
-        $stmt = $this->connection->prepare($query);
+        try {
+            $stmt = $this->connection->prepare($query);
 
-        if (!is_array($param)) {
-            $param = (array) $param;
+            if (!is_array($param)) $param = (array) $param;
+
+            $stmt->execute($param);
+
+            if ($mul) return $stmt->fetchAll();
+
+            return $stmt->fetch();
+        } catch (\PDOException $exception) {
+            echo $exception->getMessage();
         }
-
-        $stmt->execute($param);
-
-        if ($mul) {
-            return $stmt->fetchAll();
-        }
-
-        return $stmt->fetch();
     }
 
 

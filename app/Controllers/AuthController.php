@@ -14,24 +14,21 @@ class AuthController extends BaseController
     public function __construct()
     {
         parent::__construct();
-
-        if ($this->userId) {
-            var_dump($this->userId);
-            header("Location: dashboard");
-            exit();
-//            return $this->jsonResponse(true);
-        }
     }
 
 
     public function loginForm()
     {
+        if ($this->userId) header("Location: dashboard");
+
         return $this->render('auth.login-form');
     }
 
 
     public function registrationForm()
     {
+        if ($this->userId) header("Location: dashboard");
+
         return $this->render('auth.registration-form');
     }
 
@@ -54,11 +51,7 @@ class AuthController extends BaseController
             ]
         );
 
-
         $this->loginUser($id);
-
-
-        return $this->jsonResponse(true);
 
     }
 
@@ -66,15 +59,16 @@ class AuthController extends BaseController
 
     public function login()
     {
+
         $status = $this->validateLogin();
 
         if (!$status) exit();
 
-
-        $query = "SELECT * FROM users WHERE email = ? AND password = ?";
+        $query = "SELECT * FROM users WHERE email = ?";
         $user = $this->db->query($query, [
             $this->data['email'],
         ]);
+
 
         if ($user) {
             $isCorrect = password_verify($this->data['password'], $user['password']);
@@ -82,8 +76,7 @@ class AuthController extends BaseController
                 return $this->loginUser($user['id']);
             }
         }
-
-
+        
         $this->errors[] = "Credentials doesn't match";
         $this->jsonResponse($this->errors, 403);
     }
@@ -95,8 +88,8 @@ class AuthController extends BaseController
     {
         if ($userId) {
             $_SESSION['user_id'] = $userId;
-
-            return $this->jsonResponse(true);
+            $this->jsonResponse(true);
+            return true;
         }
     }
 
@@ -105,6 +98,7 @@ class AuthController extends BaseController
     public function logoutUser()
     {
         session_destroy();
+        header('Location: login');
     }
 
 

@@ -74,7 +74,6 @@ class BaseController
         http_response_code($status);
         echo json_encode($data, true);
 
-        return true;
     }
 
 
